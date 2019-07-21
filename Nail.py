@@ -94,6 +94,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-input", help="Please enter merged data", required=True)
     parser.add_argument("-output", help="Please enter merge completion data", required=True)
+    # parser.add_argument("-threads", help="Use THREADS threads (default 4)", type=int, default=4)
 
     args = parser.parse_args()
     GetData(args.input, args.output)
