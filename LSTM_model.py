@@ -24,7 +24,7 @@ def get_batches():
 
 class LSTMRNNNetwork(object):
 
-    def __init__(self, batch_size, rnn_size, cell_size):
+    def __init__(self, batch_size, cell_size):
 
         self.batch_size = batch_size
         self.cell_size = cell_size
@@ -109,12 +109,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('-batch_size', help='批次数', default=400, type=int)
     parser.add_argument('-cell_size', help='隐藏层维度', default=1000, type=int)
-    parser.add_argument('-embed_dim', help='向量维度', default=256, type=int)
     args = parser.parse_args()
 
     logger = logging.getLogger(__name__)
     MODEL_DIR = './model'
 
-    # LSTMRNNNetwork(args.batch_size, args.cell_size, args.embed_dim)
+    # LSTMRNNNetwork(args.batch_size, args.cell_size)
 
     logger.info("finished running %s", program)
